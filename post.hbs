@@ -4,10 +4,12 @@
     <main class="site-main">
         {{#post}}
             {{> content width="wide"}}
+            <div class="container medium" style="margin-top: 5rem;">
+                {{> comments}}
+            </div>
         {{/post}}
         {{#is "post"}}
             {{> related}}
-            {{> comment}}
         {{/is}}
     </main>
 </div>
