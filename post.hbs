@@ -4,9 +4,11 @@
     <main class="site-main">
         {{#post}}
             {{> content width="wide"}}
-            <div class="container medium" style="margin-top: 5rem;">
-                {{> comments}}
-            </div>
+            {{ ^has tag="disable-comments" }}
+                <div class="container medium" style="margin-top: 5rem;">
+                    {{> comments}}
+                </div>
+            {{ /has }}
         {{/post}}
         {{#is "post"}}
             {{> related}}
